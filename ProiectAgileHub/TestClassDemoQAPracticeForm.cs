@@ -15,8 +15,7 @@ namespace ProiectAgileHub
         public void SubmitForm()
         {
             // Arrange
-            Hooks navigate = new Hooks();
-            navigate.NavigateToURL("https://demoqa.com/forms");
+            NavigateToURL("https://demoqa.com/forms");
             HomePage homePage = new HomePage(Driver);
             PracticeFormPage practiceFormPage = new PracticeFormPage(Driver);
             homePage.ClickOnFormButton();
