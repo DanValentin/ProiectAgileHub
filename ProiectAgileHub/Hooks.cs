@@ -16,15 +16,15 @@ namespace ProiectAgileHub
         public void Setup()
         {
             Driver = new ChromeDriver();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Driver.Manage().Window.Maximize();
 
 
 
         }
-        public void NavigateToURL(string url)
+        public void NavigateToURL()
         {
-            Driver.Navigate().GoToUrl(url);
+            Driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
         }
 
         [TearDown]

@@ -59,8 +59,7 @@
   <ItemGroup>
     <Compile Include="Hooks.cs" />
     <Compile Include="PageObjectsDemoQAPracticeForm\HomePage.cs" />
-    <Compile Include="PageObjectsDemoQAPracticeForm\PracticeFormPage.cs" />
-    <Compile Include="TestClassDemoQAPracticeForm.cs" />
+    <Compile Include="HomePageTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
