@@ -57,9 +57,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjectsDemoQAPracticeForm\ProductsPage.cs" />
+    <Compile Include="PageObjectsDemoQAPracticeForm\UserPage.cs" />
+    <Compile Include="OrdersTest.cs" />
+    <Compile Include="UserActionTests.cs" />
+    <Compile Include="SignInTest.cs" />
+    <Compile Include="ContactUsTest.cs" />
     <Compile Include="Hooks.cs" />
+    <Compile Include="PageObjectsDemoQAPracticeForm\ContactUsPage.cs" />
     <Compile Include="PageObjectsDemoQAPracticeForm\HomePage.cs" />
     <Compile Include="HomePageTests.cs" />
+    <Compile Include="PageObjectsDemoQAPracticeForm\SignInPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
