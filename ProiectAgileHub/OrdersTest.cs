@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using ProiectAgileHub.PageObjectsDemoQAPracticeForm;
 
@@ -20,8 +16,7 @@ namespace ProiectAgileHub
             SignInPage signInPage = new SignInPage(Driver);
             UserPage userPage = new UserPage(Driver);
             ProductsPage products = new ProductsPage(Driver);
-            //signInPage.clickOnSignInUsButton();
-            //userPage.enterCredentialsAndLogin();
+            
 
 
 
@@ -87,7 +82,7 @@ namespace ProiectAgileHub
 
         }
 
-        [Test, Category("AddAndDeleteProductsInBasket")]
+        [Test, Category("AddAndDeleteProductsInCartTest")]
         public void AddAndDeleteItemsFromCartTest()
         {
             // Arrange
@@ -186,7 +181,6 @@ namespace ProiectAgileHub
             SignInPage signInPage = new SignInPage(Driver);
             UserPage userPage = new UserPage(Driver);
             ProductsPage summerDressesPage = new ProductsPage(Driver);
-            //signInPage.clickOnSignInUsButton();
 
 
 

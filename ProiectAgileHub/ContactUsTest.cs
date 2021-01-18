@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using ProiectAgileHub.PageObjectsDemoQAPracticeForm;
 
@@ -11,7 +7,7 @@ namespace ProiectAgileHub
      [TestFixture]
     class ContactUsTest : Hooks
     {
-        [Test, Category("SendFormToWebmaster")]
+        [Test, Category("SendFormToWebmasterTest")]
         public void ContactUsFormWebmaster()
         {
             // Arrange
@@ -35,7 +31,7 @@ namespace ProiectAgileHub
             Assert.IsTrue(homePage.ContactButtonIsDispayed());
             Assert.AreEqual(contactUsPage.checkIfFormWasSuccesffully(), "Your message has been successfully sent to our team.", "The form was not send");
         }
-        [Test, Category("SendFormToWebmaster")]
+        [Test, Category("SendFormToWebmasterTest")]
         public void ContactUsFormWithFileUpload()
         {
             // Arrange
