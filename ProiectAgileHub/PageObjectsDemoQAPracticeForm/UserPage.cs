@@ -23,7 +23,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement enterEmailAddress => _driver.FindElement(By.XPath("//input[@id='email']"));
         private IWebElement enterPassword => _driver.FindElement(By.XPath("//input[@id='passwd']"));
         private IWebElement clickOnSignInButton => _driver.FindElement(By.XPath("//button[@id='SubmitLogin']"));
-        private IWebElement authentificationTextMessage => _driver.FindElement(By.XPath("//h1[contains(text(),'Authentication')]"));
+        private IWebElement authentificationTextMessage => _driver.FindElement(By.XPath("//h1[normalize-space()='Authentication']"));
         private IWebElement proceedToCheckoutButtonFromAddressesPage => _driver.FindElement(By.XPath("//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]"));
         private IWebElement proccedToCheckoutFromSummaryPage => _driver.FindElement(By.XPath("//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]"));
         private IWebElement termOfServiceCheckBox => _driver.FindElement(By.XPath("//input[@id='cgv']"));
@@ -94,7 +94,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         }
         public void enterCredentialsAndLogin()
         {
-            enterEmailAddress.SendKeys("testest@mailinator.com");
+            enterEmailAddress.SendKeys("teste@mailinator.com");
             enterPassword.SendKeys("123456");
             clickOnSignInButton.Click();
         }

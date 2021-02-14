@@ -22,7 +22,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement logoHomePage => _driver.FindElement(By.XPath("//*[@id='header_logo']/a[1]/img[1]"));
         private IWebElement contactUsButton => _driver.FindElement(By.XPath("//*[@id='contact-link']/a[1]"));
         private IWebElement signInButton => _driver.FindElement(By.XPath("//a[contains(text(),'Sign in')]"));
-        public IWebElement heroImage => _driver.FindElement(By.XPath("//ul[@id='homeslider']"));
+        public IWebElement heroImage => _driver.FindElement(By.XPath("//div[@id='slider_row']//li[4]//div[1]"));
         private IWebElement homePagePhoneNumber => _driver.FindElement(By.XPath("//strong[contains(text(),'0123-456-789')]"));
         private IWebElement womenNestedMainMenu => _driver.FindElement(By.XPath("//a[@title='Women']"));
         private IWebElement womenNestedSecondMenu => _driver.FindElement(By.XPath("//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/ul[1]/li[2]/ul[1]/li[3]/a[1]"));
