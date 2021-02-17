@@ -8,6 +8,7 @@ namespace ProiectAgileHub
 {
     class UserDto
     {
+
         public string userEmail { get; set; }
         public string userPassword { get; set; }
     }
