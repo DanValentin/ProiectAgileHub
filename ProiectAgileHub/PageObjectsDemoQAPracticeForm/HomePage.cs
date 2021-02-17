@@ -19,13 +19,13 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
             _driverWait.IgnoreExceptionTypes();
         }
 
-        private IWebElement logoHomePage => _driver.FindElement(By.XPath("//*[@id='header_logo']/a[1]/img[1]"));
-        private IWebElement contactUsButton => _driver.FindElement(By.XPath("//*[@id='contact-link']/a[1]"));
-        private IWebElement signInButton => _driver.FindElement(By.XPath("//a[contains(text(),'Sign in')]"));
-        public IWebElement heroImage => _driver.FindElement(By.XPath("//div[@id='slider_row']//li[4]//div[1]"));
-        private IWebElement homePagePhoneNumber => _driver.FindElement(By.XPath("//strong[contains(text(),'0123-456-789')]"));
-        private IWebElement womenNestedMainMenu => _driver.FindElement(By.XPath("//a[@title='Women']"));
-        private IWebElement womenNestedSecondMenu => _driver.FindElement(By.XPath("//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/ul[1]/li[2]/ul[1]/li[3]/a[1]"));
+        private IWebElement LogoHomePage => _driver.FindElement(By.XPath("//*[@id='header_logo']/a[1]/img[1]"));
+        private IWebElement ContactUsButton => _driver.FindElement(By.XPath("//*[@id='contact-link']/a[1]"));
+        private IWebElement SignInButton => _driver.FindElement(By.XPath("//a[contains(text(),'Sign in')]"));
+        public IWebElement HeroImage => _driver.FindElement(By.XPath("//div[@id='slider_row']//li[4]//div[1]"));
+        private IWebElement HomePagePhoneNumber => _driver.FindElement(By.XPath("//strong[contains(text(),'0123-456-789')]"));
+        private IWebElement WomenNestedMainMenu => _driver.FindElement(By.XPath("//a[@title='Women']"));
+        private IWebElement WomenNestedSecondMenu => _driver.FindElement(By.XPath("//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[1]/ul[1]/li[2]/ul[1]/li[3]/a[1]"));
         
 
 
@@ -33,37 +33,37 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         public void navigateInNestedMenu()
         {
             Actions builder = new Actions(_driver);
-            builder.MoveToElement(womenNestedMainMenu).Perform(); 
-            builder.MoveToElement(womenNestedSecondMenu).Click().Build().Perform();
+            builder.MoveToElement(WomenNestedMainMenu).Perform(); 
+            builder.MoveToElement(WomenNestedSecondMenu).Click().Build().Perform();
 
         }
         public void clickOnContactUsButton()
         {
-            contactUsButton.Click();
+            ContactUsButton.Click();
         }
         public bool LogoIsDispayed()
         {
-            bool logoIsDisplayed = logoHomePage.Displayed;
+            bool logoIsDisplayed = LogoHomePage.Displayed;
             return logoIsDisplayed;
         }
         public bool SignInButtonIsDispayed()
         {
-            bool signInButtonIsDisplayed = signInButton.Displayed;
+            bool signInButtonIsDisplayed = SignInButton.Displayed;
             return signInButtonIsDisplayed;
         }
         public bool ContactButtonIsDispayed()
         {
-            bool contactButtonIsDisplayed = contactUsButton.Displayed;
+            bool contactButtonIsDisplayed = ContactUsButton.Displayed;
             return contactButtonIsDisplayed;
         }
         public string VerifyPhoneNumberOnHomePage()
         {
-            string phoneNumber = homePagePhoneNumber.Text;
+            string phoneNumber = HomePagePhoneNumber.Text;
             return phoneNumber;
         }
         public bool HeroImageIsDispayed()
         {
-            bool heroImgeIsDisplayed = heroImage.Displayed;
+            bool heroImgeIsDisplayed = HeroImage.Displayed;
             return heroImgeIsDisplayed;
         }
         public string PageTitle()

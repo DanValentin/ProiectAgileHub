@@ -34,7 +34,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement addExtraQuantityButton => _driver.FindElement(By.XPath("//i[@class='icon-plus']"));
         private IWebElement viewShoppingCartHoverOver => _driver.FindElement(By.XPath("//a[@title='View my shopping cart']"));
         private IWebElement deleteFirstItemFromCart => _driver.FindElement(By.XPath("//dt[@class='first_item']//a[@title='remove this product from my cart']"));
-        private IWebElement removeQualityButton => _driver.FindElement(By.XPath("//i[@class='icon-minus']"));
+        private IWebElement removeQualityButton => _driver.FindElement(By.CssSelector("body.order.hide-left-column.hide-right-column.lang_en:nth-child(2) div.columns-container div.container div.row:nth-child(3) div.center_column.col-xs-12.col-sm-12 div.table_block.table-responsive:nth-child(5) table.table.table-bordered.stock-management-on tr.cart_item.last_item.address_447719.even:nth-child(2) td.cart_delete.text-center div:nth-child(1) a.cart_quantity_delete > i.icon-trash"));
 
 
         
@@ -98,6 +98,14 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
             enterPassword.SendKeys("123456");
             clickOnSignInButton.Click();
         }
+
+        public void enterCredentialsAndLoginDto(UserDto user)
+        {
+            enterEmailAddress.SendKeys(user.userEmail);
+            enterPassword.SendKeys(user.userPassword);
+            clickOnSignInButton.Click();
+        }
+
         public void logoutAction()
         {
             signOutButton.Click();
