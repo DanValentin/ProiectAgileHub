@@ -33,7 +33,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement proceedToCheckOut => _driver.FindElement(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a[1]/span[1]"));
         private IWebElement continueShoppingButton => _driver.FindElement(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/span[1]/span[1]"));
         private IWebElement proceedToCheckoutButton => _driver.FindElement(By.XPath("//a[@class='button btn btn-default standard-checkout button-medium']"));
-        private IWebElement tShirtButton => _driver.FindElement(By.XPath("//*[@id='block_top_menu']/ul[1]/li[3]/a[1]"));
+        private IWebElement tShirtButton => _driver.FindElement(By.XPath("//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[3]/a[1]"));
         private IWebElement tshirtHoverOver => _driver.FindElement(By.XPath("//*[@id='center_column']/ul[1]/li[1]/div[1]/div[1]/div[1]/a[1]/img[1]"));
         private IWebElement tshirtAddToCartButton => _driver.FindElement(By.XPath("//*[@id='center_column']/ul[1]/li[1]/div[1]/div[2]/div[2]/a[1]/span[1]"));
         private IWebElement preceedToCheckOutFromTshirtOrder => _driver.FindElement(By.XPath("//span[normalize-space()='Proceed to checkout']"));
