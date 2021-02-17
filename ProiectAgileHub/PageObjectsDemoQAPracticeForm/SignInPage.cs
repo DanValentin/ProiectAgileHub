@@ -20,7 +20,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement signInButton => _driver.FindElement(By.XPath("//a[contains(text(),'Sign in')]"));
         private IWebElement enterEmailAddressInputField => _driver.FindElement(By.XPath("//input[@id='email_create']"));
         private IWebElement createAccountButton => _driver.FindElement(By.XPath("//button[@id='SubmitCreate']"));
-        private IWebElement selectAccountTitle => _driver.FindElement(By.XPath("//*[@id='account-creation_form']/div[1]/div[1]/div[1]/label[1]"));
+        private IWebElement selectAccountTitle => _driver.FindElement(By.CssSelector("#id_gender1"));
         private IWebElement firstNameInputField => _driver.FindElement(By.XPath("//input[@id='customer_firstname']"));
         private IWebElement lastNameInputField => _driver.FindElement(By.XPath("//input[@id='customer_lastname']"));
         private IWebElement passwordInputField => _driver.FindElement(By.XPath("//input[@id='passwd']"));

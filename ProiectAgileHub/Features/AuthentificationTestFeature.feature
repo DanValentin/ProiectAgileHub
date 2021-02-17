@@ -1,11 +1,19 @@
 ﻿Feature: AuthentificationTestFeature
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to login into website
+	As a normal user
+	I want to be logged in successfully 
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+@SmokeTests
+Scenario Outline: ValidateLogin
+	Given I navigate to authentification page
+	When I login with following credentioals
+	| userEmail             | userPassword |
+	| teste@mailinator.com  | 1234 |
+	When I login with user 'teste@mailinator.com'
+		And password '1234'
+	Then I am logged in
+
+Examples: 
+| userEmailValue        | userPasswordValue |
+| teste@mailinator.com  | 1234              |
+| teste2@mailinator.com | 1234              |
