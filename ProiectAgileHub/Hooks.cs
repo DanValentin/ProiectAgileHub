@@ -19,15 +19,13 @@ namespace ProiectAgileHub
         [SetUp]
         public void Setup()
         {
-            // Driver = new ChromeDriver();
-            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            // Driver.Manage().Window.Maximize();
 
             var browserType = TestContext.Parameters.Get("Browser", "Chrome");
             _browserType = (BrowserType)Enum.Parse(typeof(BrowserType), browserType);
             ChooseDriverInstance(_browserType);
             Driver.Manage().Window.Maximize();
             Driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
         }
         public void ChooseDriverInstance(BrowserType browserType)
@@ -35,13 +33,9 @@ namespace ProiectAgileHub
             switch (browserType)
             {
                 case BrowserType.Chrome:
-                    //var optionsChrome = new ChromeOptions();
-                    //Driver = new RemoteWebDriver(new Uri(" http://localhost:4446/wd/hub"), optionsChrome);
                     Driver = new ChromeDriver();
                     break;
                 case BrowserType.Firefox:
-                    //var optionsFirefox = new FirefoxOptions();
-                    //Driver = new RemoteWebDriver(new Uri(" http://localhost:4446/wd/hub"), optionsFirefox);
                     Driver = new FirefoxDriver();
                     break;
             }

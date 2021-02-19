@@ -26,7 +26,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement authentificationTextMessage => _driver.FindElement(By.XPath("//h1[normalize-space()='Authentication']"));
         private IWebElement proceedToCheckoutButtonFromAddressesPage => _driver.FindElement(By.XPath("//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]"));
         private IWebElement proccedToCheckoutFromSummaryPage => _driver.FindElement(By.XPath("//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]"));
-        private IWebElement termOfServiceCheckBox => _driver.FindElement(By.XPath("//input[@id='cgv']"));
+        private IWebElement termOfServiceCheckBox => _driver.FindElement(By.XPath("//div[@id='uniform-cgv']"));
         private IWebElement proceedToCheckoutButtonFromShippingPage => _driver.FindElement(By.XPath("//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]"));
         private IWebElement selectPaymentType => _driver.FindElement(By.XPath("//a[@title='Pay by bank wire']"));
         private IWebElement confirmMyOrderButton => _driver.FindElement(By.XPath("//span[normalize-space()='I confirm my order']"));

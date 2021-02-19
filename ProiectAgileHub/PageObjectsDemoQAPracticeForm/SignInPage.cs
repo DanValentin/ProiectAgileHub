@@ -20,7 +20,7 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         private IWebElement signInButton => _driver.FindElement(By.XPath("//a[contains(text(),'Sign in')]"));
         private IWebElement enterEmailAddressInputField => _driver.FindElement(By.XPath("//input[@id='email_create']"));
         private IWebElement createAccountButton => _driver.FindElement(By.XPath("//button[@id='SubmitCreate']"));
-        private IWebElement selectAccountTitle => _driver.FindElement(By.CssSelector("#id_gender1"));
+        private IWebElement selectAccountTitle => _driver.FindElement(By.XPath("//label[normalize-space()='Mr.']"));
         private IWebElement firstNameInputField => _driver.FindElement(By.XPath("//input[@id='customer_firstname']"));
         private IWebElement lastNameInputField => _driver.FindElement(By.XPath("//input[@id='customer_lastname']"));
         private IWebElement passwordInputField => _driver.FindElement(By.XPath("//input[@id='passwd']"));
@@ -62,6 +62,9 @@ namespace ProiectAgileHub.PageObjectsDemoQAPracticeForm
         }
         public void enterPersonalDetails()
         {
+            //WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            //IWebElement SearchResult = wait.Until(ExpectedConditions.ElementExists((By)selectAccountTitle));
+            //SearchResult.Click();
             selectAccountTitle.Click();
             firstNameInputField.SendKeys("John");
             lastNameInputField.SendKeys("Doe");
